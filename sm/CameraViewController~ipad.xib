@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4608" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController">
+            <connections>
+                <outlet property="countLabel" destination="3gv-ZY-loF" id="9va-su-sVt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-zs-TaQ" userLabel="stopButton">
+                    <rect key="frame" x="45" y="681" width="300" height="103"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="VS6-QF-VTe"/>
+                        <constraint firstAttribute="height" constant="103" id="cEx-9E-AYb"/>
+                    </constraints>
+                    <state key="normal" image="options_stop.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onStop:" destination="-1" eventType="touchUpInside" id="Ssk-pJ-2DN"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500/500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gv-ZY-loF" userLabel="statusLabel">
+                    <rect key="frame" x="185" y="60" width="200" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="6eh-Bv-hgy"/>
+                        <constraint firstAttribute="height" constant="60" id="l1E-lH-k5K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIw-wc-Wl5" userLabel="countLabel">
+                    <rect key="frame" x="95" y="322" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="iAo-0u-4iq"/>
+                        <constraint firstAttribute="width" constant="200" id="nc9-Sg-Ae7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="OSm-zs-TaQ" secondAttribute="centerX" id="1cH-DQ-VSu"/>
+                <constraint firstAttribute="bottom" secondItem="OSm-zs-TaQ" secondAttribute="bottom" constant="60" id="JCh-bu-N8i"/>
+                <constraint firstAttribute="trailing" secondItem="3gv-ZY-loF" secondAttribute="trailing" constant="5" id="QTh-7u-iyl"/>
+                <constraint firstAttribute="centerX" secondItem="qIw-wc-Wl5" secondAttribute="centerX" id="UMu-Er-iic"/>
+                <constraint firstItem="3gv-ZY-loF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="e06-zu-U35"/>
+                <constraint firstAttribute="centerY" secondItem="qIw-wc-Wl5" secondAttribute="centerY" id="uL8-Yl-jP6"/>
+            </constraints>
+            <point key="canvasLocation" x="-16" y="-17"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="options_stop.png" width="600" height="205"/>
+    </resources>
+</document>
